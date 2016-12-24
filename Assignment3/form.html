@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title></title>
+        <script src="jquery-3.1.1.min.js"></script>
+        <script src="formjs.js"></script>
+        <style>
+            table, th, td {
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <table style="width:80%" id="myTable">
+            <tbody>
+                <tr>
+                    <th>Name</th>
+                    <th>Id</th>
+                    <th>Email</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <button onclick="saveRecord()">SAVE</button>
+        <br>
+        <br>
+        <div>
+            Name: <input type="text" name="Name" id="myName">
+            <br>
+            <br>
+            Id : <input type="number" name="Id" id="myId">
+            <br>
+            <br>
+            Email: <input type="text" name="Email" id="myEmail">
+            <br>
+            <br>
+            <button onclick="AddEnryToTable()">Add </button>
+            <button onclick="clearFields()">Reset </button>
+        </div>
+    </body>
+</html>
