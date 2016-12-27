@@ -3,7 +3,8 @@ var contacts = [
     {"No": 2, "Name":"mac", "Email": "mac@gmail.com", "Gender": "male","Remove":"","Add":""},
     {"No": 3, "Name":"harry", "Email": "harry@gmail.com", "Gender": "male","Remove":"","Add":""},
     {"No": 4, "Name":"chris", "Email": "chris@gmail.com", "Gender": "male","Remove":"","Add":""},
-    {"No": 5, "Name":"shon", "Email": "shon@gmail.com", "Gender": "male","Remove":"","Add":""}
+    {"No": 5, "Name":"shon", "Email": "shon@gmail.com", "Gender": "male","Remove":"","Add":""},
+    {"No": 6, "Name":"mary", "Email": "mary@gmail.com", "Gender": "female","Remove":"","Add":""}
 ]
 
 function createTable(){
