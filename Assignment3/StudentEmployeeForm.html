@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <script src="jquery-3.1.1.min.js"></script>
+        <script src="StudentEmployee.js"></script>
+        <meta charset="utf-8"/>
+    </head>
+    <body>
+        <table width="100%">
+            <tr>
+                <td style="border: 2px solid black; vertical-align: top">
+                    <form name="employee">
+                        <table id="tblEmployee">
+                            <tr>
+                                <td>First Name</td>
+                                <td>
+                                    <input name="firstName" id="empFirstName" type="text" required/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Last Name</td>
+                                <td>
+                                    <input name="lastName" id="empLastName" type="text" required/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Email</td>
+                                <td>
+                                    <input name="email" id="empEmail" required/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Address</td>
+                                <td>
+                                    <input name="addressName" id="empAddress" type="text"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Gender</td>
+                                <td>
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <input name="Gender" value="male" style="float: left" type="radio" required/>
+                                            </td>
+                                            <td>Male</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input name="Gender" value="female" style="float: left" type="radio" required/>
+                                            </td>
+                                            <td>Female</td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Position</td>
+                                <td>
+                                    <select id="position" onchange="showExperiance()">
+                                        <option>HTML Developer</option>
+                                        <option>JavaScript Developer</option>
+                                        <option>Java Developer</option>
+                                        <option>Database Developer</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr id="blogLink">
+                                <td>Blog Link</td>
+                                <td><input id="bloglink"type="text""/></td>
+                   </tr>
+                   
+               </table>
+               <button name="submit " id="empFormSubmit" onclick="validateEmpForm()">Submit</button>
+               <button name="reset " id="empFormCancel"  type="reset">Reset</button>
+         </form>
+         </td>
+         <td style="border:2px solid black;vertical-align:top ">
+         <form name="student">
+               <table>
+                <tr>
+                       <td>First Name</td>
+                       <td><input name="firstName" id="studFirstName" type="text "  required /></td>
+                   </tr>
+                   <tr>
+                       <td>Last Name</td>
+                       <td><input name="lastName" id="studLastName" type="text "  required /></td>
+                   </tr>
+                   <tr>
+                       <td>Email</td>
+                       <td><input name="email" id="studEmail" required /></td>
+                   </tr>
+                   <tr>
+                       <td>Address</td>
+                       <td><input name="address" id="studAddress" type="text "  /></td>
+                   </tr>
+                   <tr>
+                       <td>Gender</td>
+                       <td>
+                        <table>
+                                        <tr>
+                                            <td>
+                                                <input name="Gender " value="male" style="float:left" type="radio" required/>
+                                            </td>
+                                            <td>Male</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input name="Gender " value="female" style="float:left" type="radio" required/>
+                                            </td>
+                                            <td>Female</td>
+                                        </tr>
+                                    </table>
+                       </td>
+                   </tr>
+                    <tr>
+                       <td>Roll No</td>
+                       <td><input name="rollNumber " id="rollNumber" type="number"  /></td>
+                   </tr>
+                   </table>
+                   <button name="submit " id="studFormSubmit" onclick="validateStudForm()">Submit</button>
+                   <button name="reset " id="studFormCancel"  type="reset">Reset</button>
+                
+                </form>
+         </td></tr>
+         <tr><td colspan="2" style="border:2px solid black;vertical-align:top;">
+         AJAX</td></tr>
+         </table>
+   <div>
+      
+   </div>
+</body>
+</html>
+
