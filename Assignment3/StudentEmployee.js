@@ -7,18 +7,21 @@ function validateEmpForm(){
     if (!NamePattern.test(name.value)){
         $("</br><span style='color:red'>Name should contain only characters</span>").insertAfter(name);
         console.log("invalid name");
+        return false;
     }
 
     var lname = document.getElementById("empLastName");
     if(!NamePattern.test(lname.value)){
         $("</br><span style='color:red'>Last Name should contain only characters</span>").insertAfter(lname);
         console.log("invalid last name");
+        return false;
     }
 
     var email = document.getElementById("empEmail");
     var EmailPattern = new RegExp("^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$");
     if (!EmailPattern.test(email.value)){
         $("</br><span style='color:red'>Enter valid email</span>").insertAfter(email);
+        return false;
         
     }
 
@@ -26,6 +29,7 @@ function validateEmpForm(){
     if(address.value.length!=0){
         if(address.value.length < 10 || address.value.length >150){
             $("</br><span style='color:red'>Address should have min 10 & max 150 characters</span>").insertAfter(address);
+            return false;
         }
     }
 }
@@ -120,25 +124,28 @@ function validateStudForm(){
     if (!NamePattern.test(name.value)){
         $("</br><span style='color:red'>Name should contain only characters</span>").insertAfter(name);
         console.log("invalid name");
+        return false;
     }
 
     var lname = document.getElementById("studLastName");
     if(!NamePattern.test(lname.value)){
         $("</br><span style='color:red'>Last Name should contain only characters</span>").insertAfter(lname);
         console.log("invalid last name");
+        return false;
     }
 
     var email = document.getElementById("studEmail");
     var EmailPattern = new RegExp("^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$");
     if (!EmailPattern.test(email.value)){
         $("</br><span style='color:red'>Enter valid email</span>").insertAfter(email);
-        
+        return false;
     }
 
     var address = document.getElementById("studAddress");
     if(address.value.length!=0){
         if(address.value.length < 10 || address.value.length >150){
             $("</br><span style='color:red'>Address should have min 10 & max 150 characters</span>").insertAfter(address);
+            return false;
         }
     }
 
