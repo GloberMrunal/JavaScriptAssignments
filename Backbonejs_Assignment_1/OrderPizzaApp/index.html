@@ -1,0 +1,78 @@
+<!--
+        <script src= "../lib/jquery-3.1.1.min.js" type="text/javascript"></script>
+        <script src= "../lib/underscore-min.js" type="text/javascript"></script>
+        <script src= "../lib/backbone-min.js" type="text/javascript"></script> 
+        <script src= "../models/userModel.js" type="text/javascript"></script> 
+        <script src= "../models/pizzaModel.js" type="text/javascript"></script>       
+        <script src= "../collections\userCollection.js" type="text/javascript"></script>
+        <script src= "../collections\pizzaCollection.js" type="text/javascript"></script>
+        <script src= "orderPizzaApp.js" type="text/javascript"></script> 
+
+  -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>View render</title>
+	<script type="text/javascript" src="../lib/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="../lib/underscore-min.js"></script>
+	<script type="text/javascript" src="../lib/backbone-min.js"></script>
+    <script src= "../models/userModel.js"type="text/javascript"  ></script>
+    <script src= "../models/pizzaModel.js" type="text/javascript"></script>
+    <script src= "../models/customerInfo.js" type="text/javascript"></script>
+    <script src= "../views/singlePizzaView.js" type="text/javascript"></script>
+    <script src= "../views/allPizzaView.js" type="text/javascript"></script>
+    <script src= "../views/selectedPizzaView.js" type="text/javascript"></script>
+    <script src= "../views/finalSelectionView.js" type="text/javascript"></script>
+    <script src= "../views/addMorePizzaView.js" type="text/javascript"></script>
+    <script src= "../views/customerInfoView.js" type="text/javascript"></script>
+    <script src= "../collections/pizzaCollection.js" type="text/javascript"></script>
+    <script src= "orderPizzaApp.js" type="text/javascript"></script> 
+    
+</head>
+<body>  
+        <div id="mainDiv">
+        </div>
+        
+        <script type="text/javascript">
+            var user1 = new app.User({
+                    name:"globant",
+                    password:"globantindia"
+                });
+            var UserLoginView = Backbone.View.extend({
+                el:'#mainDiv',
+                render:function(){
+                    this.$el.html("<form>User name:<br><input type='text' name='username', id='name'><br><br>User password:<br><input type='password' name='psw' id='password'></form>");
+                    this.$el.append("</br><button id='login'>Login</button>");
+                    return this;
+                },
+
+                events:{
+                    'click #login':'login'
+                },
+
+                login: function(){
+                    console.log("you clicked on login "+$("#name").val());
+                    if($("#name").val() == user1.get("name") && $("#password").val() == user1.get("password")){
+                        console.log("login successfull");
+                        createPizzaView()
+                    }
+                    else{
+                        this.render();
+                        this.$el.append("</br><p style='color:red'>Invalid login</p>");           
+                    }
+                }
+            });
+            $(document).ready(function(){
+                console.log("creating view");
+                var user = new UserLoginView();
+                user.render();
+            })
+        </script>
+</body>
+</html>
+
+
+
+
+
