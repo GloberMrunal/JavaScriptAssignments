@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+	    <title> Slider App </title>
+        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+        <script type="text/javascript" src="../lib/jquery-3.1.1.min.js"></script>
+	    <script type="text/javascript" src="../lib/underscore-min.js"></script>
+	    <script type="text/javascript" src="../lib/backbone-min.js"></script>
+        <script src= "../models/userModel.js"type="text/javascript"  ></script>
+        <script src= "../models/taskModel.js"type="text/javascript"  ></script>
+        <script src= "../views/taskView.js"type="text/javascript"  ></script>
+        <script src= "../views/userView.js"type="text/javascript"  ></script>
+        <script src= "../sliderApp/sliderApp.js"type="text/javascript"  ></script>
+        
+    </head>
+    <body>
+      <table id="sliderAppTable"> 
+      <tr>    
+       <td>   
+        <section id="userSection" style="float:left;" >
+            <table id ='userTable' border='2px' style="height:200px; width:20%">               
+                <tr id='userRow'>
+                    <td id='userLeftNavtd'>
+                        <button id='userLeftNavBtn' style="height:200px;width:50px">
+                            <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                        </button>
+                    </td>
+                    <td id='userImagetd'>
+                    
+                    </td>
+                    <td id= 'userRightNavtd'>
+                        <button id='userRightNavBtn' style="height:200px;width:50px" >
+                            <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                        </button>
+                    </td>
+                </tr>
+            </table>
+        </section>
+        <section id="taskSection">
+            <table id="taskTable" style="float:left; height:200px; width:60%" border='2px' >
+                <tr id="taskRow">
+                    <td id='taskLeftNavtd'>
+                        <button id='taskLeftNavBtn' style="height:200px;width:50px">
+                            <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                        </button>
+                    </td>
+                    <td id="usertasks"></td>
+                    <td id= 'taskRightNavtd'>
+                        <button id='taskRightNavBtn' style="height:200px;width:50px">
+                            <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                        </button>
+                    </td>
+                </tr>
+            </table>
+        </section>
+      </td>
+    <tr>
+    <tr>
+        <td style="font-size:25px;text-align:center">
+            <section id="secondRow" style="height:40px;width: 80%; border: 3px solid green; padding"></section>
+        </td>
+    </tr>    
+    </body>
+</html>
